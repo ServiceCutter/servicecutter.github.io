@@ -76,6 +76,8 @@
 
 <p>The solver tab allows you to see candidate service cuts and modifiy the underlying algorithms, it's parameters and the prioritities.</p>
 
+<p><img src="https://raw.githubusercontent.com/ServiceCutter/servicecutter.github.io/master/screenshot-solver-cargo-leung.png" alt="Screenshot Candidate Service Cut"></p>
+
 <p>The Service Cutter maps all imported data onto a graph. The nanoentities are the nodes and the coupling between nanoentities is stored on weighted, undirected edges.</p>
 
 <h3>
@@ -97,13 +99,26 @@ The "Epidemic Label Propagation" by <a href="http://arxiv.org/pdf/0808.2633.pdf"
 <h3>
 <a id="parameters" class="anchor" href="#parameters" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parameters</h3>
 
-<p>priorities...
-Number of clusters</p>
+<p>The parameters can be used to influence the candidate service cuts. Modify the coupling criteria in such a way that they reflect the your system's context. Security and consistency for example are significantly divergent in a banking environment compared to an online social network.</p>
+
+<p><img src="https://raw.githubusercontent.com/ServiceCutter/servicecutter.github.io/master/screenshot-solver-priorities.png" alt="Screenshot priorities"></p>
 
 <h3>
 <a id="analysis-mode" class="anchor" href="#analysis-mode" aria-hidden="true"><span class="octicon octicon-link"></span></a>Analysis mode</h3>
 
-<p>intro</p>
+<p>Activate the analysis mode to understand the implications of a candidate service cut. </p>
+
+<p><img src="https://raw.githubusercontent.com/ServiceCutter/servicecutter.github.io/master/screenshot-solver-analysis-button.png" alt="Screenshot Button"></p>
+
+<p>The analysis mode activates the following features:</p>
+
+<ul>
+<li>An connection between the services is drawn when a use case exists that uses nanoentities of both services.</li>
+<li>You can click on a service or a connection between two services and the Service Cutter will display the Published Language of the selected service.</li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/ServiceCutter/servicecutter.github.io/master/screenshot-solver-analysis-service.png" alt="Screenshot Published Language">
+<img src="https://raw.githubusercontent.com/ServiceCutter/servicecutter.github.io/master/screenshot-solver-analysis-example.png" alt="Screenshot Service Connection"></p>
 
 <p><em>Hint: The analysis mode is only available with use cases present.</em></p>
 
