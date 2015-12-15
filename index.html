@@ -31,7 +31,7 @@
           <h1>
 <a id="service-cutter" class="anchor" href="#service-cutter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Service Cutter</h1>
 
-<p>You will learn how to import data into the Service Cutter and analyze service cut. The last section outlines two possible usage scenarios.</p>
+<p>You will learn how to import data into the Service Cutter and analyze service cuts. The last section outlines two possible usage scenarios.</p>
 
 <h2>
 <a id="core-concepts" class="anchor" href="#core-concepts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Core Concepts</h2>
@@ -49,7 +49,7 @@
 
 <p><img src="https://raw.githubusercontent.com/ServiceCutter/servicecutter.github.io/master/screenshot-menu-import.png" alt="Screenshot Menu Import"></p>
 
-<p>Currently data updates are not possible. You therefore have to import it again after applying changes.</p>
+<p>Currently updates are not possible. You have to import a new model after applying changes to the files.</p>
 
 <h3>
 <a id="domain-model" class="anchor" href="#domain-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Domain Model</h3>
@@ -84,17 +84,28 @@
 <p>The Service Cutter uses graph clustering algorithms to find densely connected clusters which are presented as candidate service cut. Currently two different algorithms are supported:
 The "Epidemic Label Propagation" by <a href="http://arxiv.org/pdf/0808.2633.pdf"><strong>Leung</strong> et al</a> is non-deterministic and finds an optimal number of clusters. Use the recalculate button to see different service cuts.</p>
 
-<p>SCREENSHOT</p>
+<p><img src="https://raw.githubusercontent.com/ServiceCutter/servicecutter.github.io/master/screenshot-solver-algo-leung.png" alt="Screenshot Leung"></p>
 
-<p>The <strong>Girvan-Newman</strong> algorithm by <a href="http://arxiv.org/abs/cond-mat/0112110">M. Girvan and M. E. J. Newman</a> is deterministic and finds a given number of clusters. Please note that you cannot see different service cuts with Girvan-Newman as this algorithm is deterministic. You have to adjust the parameters to see different service cuts.</p>
+<p>The <strong>Girvan-Newman</strong> algorithm by <a href="http://arxiv.org/abs/cond-mat/0112110">M. Girvan and M. E. J. Newman</a> is deterministic and finds a given number of clusters. </p>
 
-<p>SCREENSHOT</p>
+<p><em>Hint: You cannot see different service cuts with Girvan-Newman as this algorithm is deterministic. You have to adjust the parameters to see different service cuts.</em></p>
+
+<p><img src="https://raw.githubusercontent.com/ServiceCutter/servicecutter.github.io/master/screenshot-solver-algo-gn.png" alt="Screenshot Girvan-Newman"></p>
+
+<p>We recommend to start with Leung and then analyze specific numbers of services with Girvan-Newman.</p>
 
 <h3>
 <a id="parameters" class="anchor" href="#parameters" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parameters</h3>
 
 <p>priorities...
 Number of clusters</p>
+
+<h3>
+<a id="analysis-mode" class="anchor" href="#analysis-mode" aria-hidden="true"><span class="octicon octicon-link"></span></a>Analysis mode</h3>
+
+<p>intro</p>
+
+<p><em>Hint: The analysis mode is only available with use cases present.</em></p>
 
 <h2>
 <a id="scenarios" class="anchor" href="#scenarios" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scenarios</h2>
