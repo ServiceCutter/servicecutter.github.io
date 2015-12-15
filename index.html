@@ -30,44 +30,59 @@
         <h1>
 <a id="service-cutter" class="anchor" href="#service-cutter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Service Cutter</h1>
 
-<p>You will learn how to import data into the Service Cutter and calculate and analyze service cut. The last section outlines two possible usage scenarios.</p>
+<p>You will learn how to import data into the Service Cutter and analyze service cut. The last section outlines two possible usage scenarios.</p>
 
 <h2>
 <a id="core-concepts" class="anchor" href="#core-concepts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Core Concepts</h2>
 
 <ul>
 <li>Nanoentity</li>
-<li>...?</li>
+<li>User Representation</li>
+<li>Coupling Criterion</li>
 </ul>
 
 <h2>
 <a id="data-import" class="anchor" href="#data-import" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Import</h2>
 
-<p>The importer tab allows you to import nanoentities </p>
+<p>The importer tab allows you to import nanoentities and user representations.</p>
 
 <p><img src="https://raw.githubusercontent.com/ServiceCutter/servicecutter.github.io/master/screenshot-menu-import.png" alt="Screenshot Menu Import"></p>
 
-<p>Only import, no edit.
-First the domain model. Then enrich it with user representations.</p>
+<p>Currently data updates are not possible. You therefore have to import it again after applying changes.</p>
 
 <h3>
 <a id="domain-model" class="anchor" href="#domain-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Domain Model</h3>
 
-<p>The Domain Model can be imported </p>
+<p>To begin with, a domain model in the form of an <a href="https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model">ERM</a> needs to be imported.</p>
+
+<p>IMAGE MODEL</p>
+
+<p>A simple domain model can be found in the samples folder. Let's try with <code>ServiceCutter/Samples/ddd_1_model.json</code> for now.</p>
 
 <h3>
 <a id="user-representations" class="anchor" href="#user-representations" aria-hidden="true"><span class="octicon octicon-link"></span></a>User Representations</h3>
+
+<p>To suggest good service cuts, we need more data. The file <code>ServiceCutter/Samples/ddd_2_user_representations.json</code> enhances the domain model with Use Cases, characteristics of the nanoentities and responsible roles.</p>
+
+<p>Now we have all the data we need. Let's continue with the analysis.</p>
 
 <h2>
 <a id="service-cut-analysis" class="anchor" href="#service-cut-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Service Cut Analysis</h2>
 
 <p><img src="https://raw.githubusercontent.com/ServiceCutter/servicecutter.github.io/master/screenshot-menu-solver.png" alt="Screenshot Menu Solver"></p>
 
+<p>The solver tab allows you to see candidate service cuts and modifiy the underlying algorithms, it's parameters and the prioritities.</p>
+
 <h3>
 <a id="algorithms" class="anchor" href="#algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Algorithms</h3>
 
+<p>Girvan-Newman, Leung</p>
+
 <h3>
 <a id="parameters" class="anchor" href="#parameters" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parameters</h3>
+
+<p>priorities...
+Number of clusters</p>
 
 <h2>
 <a id="scenarios" class="anchor" href="#scenarios" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scenarios</h2>
