@@ -31,10 +31,14 @@
           <h1>
 <a id="service-cutter" class="anchor" href="#service-cutter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Service Cutter</h1>
 
+<p>The Service Cutter suggests a structured way to service decomposition. This tutorial helps you to work with the Service Cutter.</p>
+
 <p>You will learn how to import data into the Service Cutter and analyze service cuts. The last section outlines two possible usage scenarios.</p>
 
 <h2>
 <a id="core-concepts" class="anchor" href="#core-concepts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Core Concepts</h2>
+
+<p>TODOD</p>
 
 <ul>
 <li>Nanoentity</li>
@@ -125,17 +129,29 @@ The "Epidemic Label Propagation" by <a href="http://arxiv.org/pdf/0808.2633.pdf"
 <h2>
 <a id="scenarios" class="anchor" href="#scenarios" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scenarios</h2>
 
-<p>Describes possible usage scenarios of the Service Cutter.</p>
+<p>We would like to highlight two possible usage scenarios of the Service Cutter.</p>
 
 <h3>
 <a id="green-field" class="anchor" href="#green-field" aria-hidden="true"><span class="octicon octicon-link"></span></a>Green field</h3>
 
-<p>Start from scratch, identify service candidates.</p>
+<p>The pleasant scenario is the “green field”. You have not written a single line of code but already gathered an extensive set of Use Cases, an ERM and other characterizations. You load all this data into the Service Cutter and use the suggested service cuts for an inspiring discussion with your team’s architects. Finally, you agree on a set of services and proceed to building them.</p>
+
+<ul>
+<li>
+<a href="http://martinfowler.com/articles/microservices.html">"Microservices"</a> by Martin Fowler<br>
+</li>
+</ul>
 
 <h3>
 <a id="monolith-to-microservice" class="anchor" href="#monolith-to-microservice" aria-hidden="true"><span class="octicon octicon-link"></span></a>Monolith to microservice</h3>
 
-<p>Existing tool, big ball of mud. Where to start extracting?</p>
+<p>The likely scenario with existing software is the transition from a "big ball of mud" to a nice microservice architecture. You’ve been working on an application for quite a while and you and your team only implemented a single service: The monolith. After carefully reviewing your architecture you decided that the time has come to split your application into services. This leaves to you with one big question: "Where shall I start?" The Service Cutter is able to identify candidate service cuts with a given number of services. You can use the Girvan-Newman algorithm and set the number of clusters to two. Then iteratively increase the number of services by one and you will see a possible path towards an architecture based on services.</p>
+
+<ul>
+<li>
+<a href="http://martinfowler.com/bliki/MonolithFirst.html">"MonolithFirst"</a> by Martin Fowler<br>
+</li>
+</ul>
         </section>
 
         <aside id="sidebar">
