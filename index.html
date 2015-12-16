@@ -28,15 +28,12 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h1>
-<a id="service-cutter" class="anchor" href="#service-cutter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Service Cutter</h1>
-
-<p>The Service Cutter suggests a structured way to service decomposition. This tutorial helps you to work with the Service Cutter. You should have access to a test installation or install the Service Cutter on your machine in order to try the samples.</p>
+          <p>The Service Cutter suggests a structured way to service decomposition. This tutorial helps you to work with the Service Cutter. You should have access to a test installation or install the Service Cutter on your machine in order to try the samples.</p>
 
 <p>You will learn how to import data into the Service Cutter and analyze service cuts. The last section outlines two possible usage scenarios.</p>
 
-<h2>
-<a id="core-concepts" class="anchor" href="#core-concepts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Core Concepts</h2>
+<h1>
+<a id="core-concepts" class="anchor" href="#core-concepts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Core Concepts</h1>
 
 <ul>
 <li>
@@ -45,8 +42,8 @@
 <li>A <strong>Coupling Criterion</strong> describes an architecturally significant requirement why two nanoentities should or should not be owned by the same service. These criteria define the semantic model on which the Service Cutter is built on.</li>
 </ul>
 
-<h2>
-<a id="data-import" class="anchor" href="#data-import" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Import</h2>
+<h1>
+<a id="data-import" class="anchor" href="#data-import" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Import</h1>
 
 <p>The importer tab allows you to import nanoentities and user representations.</p>
 
@@ -54,8 +51,8 @@
 
 <p>Currently updates are not possible. You have to import a new model after applying changes to the files.</p>
 
-<h3>
-<a id="domain-model" class="anchor" href="#domain-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Domain Model</h3>
+<h2>
+<a id="domain-model" class="anchor" href="#domain-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Domain Model</h2>
 
 <p>To begin with, a domain model in the form of an <a href="https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model">ERM</a> needs to be imported.</p>
 
@@ -63,8 +60,8 @@
 
 <p>A simple domain model can be found in the samples folder. Let's try with <code>ServiceCutter/Samples/ddd_1_model.json</code> for now.</p>
 
-<h3>
-<a id="user-representations" class="anchor" href="#user-representations" aria-hidden="true"><span class="octicon octicon-link"></span></a>User Representations</h3>
+<h2>
+<a id="user-representations" class="anchor" href="#user-representations" aria-hidden="true"><span class="octicon octicon-link"></span></a>User Representations</h2>
 
 <p>To suggest good service cuts, we need more data. The file <code>ServiceCutter/Samples/ddd_2_user_representations.json</code> enhances the domain model with Use Cases, characteristics of the nanoentities and responsible roles.</p>
 
@@ -72,8 +69,8 @@
 
 <p>Now we have all the data we need. Let's continue with the analysis.</p>
 
-<h2>
-<a id="service-cut-analysis" class="anchor" href="#service-cut-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Service Cut Analysis</h2>
+<h1>
+<a id="service-cut-analysis" class="anchor" href="#service-cut-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Service Cut Analysis</h1>
 
 <p><img src="https://raw.githubusercontent.com/ServiceCutter/servicecutter.github.io/master/screenshot-menu-solver.png" alt="Screenshot Menu Solver"></p>
 
@@ -83,8 +80,8 @@
 
 <p>The Service Cutter maps all imported data onto a graph. The nanoentities are the nodes and the coupling between nanoentities is stored on weighted, undirected edges.</p>
 
-<h3>
-<a id="algorithms" class="anchor" href="#algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Algorithms</h3>
+<h2>
+<a id="algorithms" class="anchor" href="#algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Algorithms</h2>
 
 <p>The Service Cutter uses graph clustering algorithms to find densely connected clusters which are presented as candidate service cut. Currently two different algorithms are supported:
 The "Epidemic Label Propagation" by <a href="http://arxiv.org/pdf/0808.2633.pdf"><strong>Leung</strong> et al</a> is non-deterministic and finds an optimal number of clusters. Use the recalculate button to see different service cuts.</p>
@@ -99,15 +96,15 @@ The "Epidemic Label Propagation" by <a href="http://arxiv.org/pdf/0808.2633.pdf"
 
 <p>We recommend to start with Leung and then analyze specific numbers of services with Girvan-Newman.</p>
 
-<h3>
-<a id="parameters" class="anchor" href="#parameters" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parameters</h3>
+<h2>
+<a id="parameters" class="anchor" href="#parameters" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parameters</h2>
 
 <p>The parameters can be used to influence the candidate service cuts. Modify the coupling criteria in such a way that they reflect the your system's context. Security and consistency for example are significantly divergent in a banking environment compared to an online social network.</p>
 
 <p><img src="https://raw.githubusercontent.com/ServiceCutter/servicecutter.github.io/master/screenshot-solver-priorities.png" alt="Screenshot priorities"></p>
 
-<h3>
-<a id="analysis-mode" class="anchor" href="#analysis-mode" aria-hidden="true"><span class="octicon octicon-link"></span></a>Analysis mode</h3>
+<h2>
+<a id="analysis-mode" class="anchor" href="#analysis-mode" aria-hidden="true"><span class="octicon octicon-link"></span></a>Analysis mode</h2>
 
 <p>Activate the analysis mode to understand the implications of a candidate service cut. </p>
 
@@ -129,13 +126,13 @@ The "Epidemic Label Propagation" by <a href="http://arxiv.org/pdf/0808.2633.pdf"
 
 <p><em>Hint: The analysis mode is only available with use cases present.</em></p>
 
-<h2>
-<a id="scenarios" class="anchor" href="#scenarios" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scenarios</h2>
+<h1>
+<a id="scenarios" class="anchor" href="#scenarios" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scenarios</h1>
 
 <p>We would like to highlight two possible usage scenarios of the Service Cutter.</p>
 
-<h3>
-<a id="green-field" class="anchor" href="#green-field" aria-hidden="true"><span class="octicon octicon-link"></span></a>Green field</h3>
+<h2>
+<a id="green-field" class="anchor" href="#green-field" aria-hidden="true"><span class="octicon octicon-link"></span></a>Green field</h2>
 
 <p>The pleasant scenario is the “green field”. You have not written a single line of code but already gathered an extensive set of Use Cases, an ERM and other characterizations. You load all this data into the Service Cutter and use the suggested service cuts for an inspiring discussion with your team’s architects. Finally, you agree on a set of services and proceed to building them.</p>
 
@@ -145,8 +142,8 @@ The "Epidemic Label Propagation" by <a href="http://arxiv.org/pdf/0808.2633.pdf"
 </li>
 </ul>
 
-<h3>
-<a id="monolith-to-microservice" class="anchor" href="#monolith-to-microservice" aria-hidden="true"><span class="octicon octicon-link"></span></a>Monolith to microservice</h3>
+<h2>
+<a id="monolith-to-microservice" class="anchor" href="#monolith-to-microservice" aria-hidden="true"><span class="octicon octicon-link"></span></a>Monolith to microservice</h2>
 
 <p>The likely scenario with existing software is the transition from a "big ball of mud" to a nice microservice architecture. You’ve been working on an application for quite a while and you and your team only implemented a single service: The monolith. After carefully reviewing your architecture you decided that the time has come to split your application into services. This leaves to you with one big question: "Where shall I start?" The Service Cutter is able to identify candidate service cuts with a given number of services. You can use the Girvan-Newman algorithm and set the number of clusters to two. Then iteratively increase the number of services by one and you will see a possible path towards an architecture based on services.</p>
 
@@ -156,8 +153,8 @@ The "Epidemic Label Propagation" by <a href="http://arxiv.org/pdf/0808.2633.pdf"
 </li>
 </ul>
 
-<h2>
-<a id="further-resources" class="anchor" href="#further-resources" aria-hidden="true"><span class="octicon octicon-link"></span></a>Further Resources</h2>
+<h1>
+<a id="further-resources" class="anchor" href="#further-resources" aria-hidden="true"><span class="octicon octicon-link"></span></a>Further Resources</h1>
 
 <ul>
 <li>
