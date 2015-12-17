@@ -74,16 +74,16 @@
 
 <p><img src="https://raw.githubusercontent.com/ServiceCutter/servicecutter.github.io/master/screenshot-menu-solver.png" alt="Screenshot Menu Solver"></p>
 
-<p>The solver tab allows you to see candidate service cuts and modifiy the underlying algorithms, it's parameters and the prioritities.</p>
+<p>The solver tab allows you to see candidate service cuts, choose an underlying algorithm, and define criteria prioritities.</p>
 
 <p><img src="https://raw.githubusercontent.com/ServiceCutter/servicecutter.github.io/master/screenshot-solver-cargo-leung.png" alt="Screenshot Candidate Service Cut"></p>
-
-<p>The Service Cutter maps all imported data onto a graph. The nanoentities are the nodes and the coupling between nanoentities is stored on weighted, undirected edges.</p>
 
 <h2>
 <a id="algorithms" class="anchor" href="#algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Algorithms</h2>
 
-<p>The Service Cutter uses graph clustering algorithms to find densely connected clusters which are presented as candidate service cut. Currently two different algorithms are supported:
+<p>The Service Cutter maps all imported data onto a graph. The nanoentities are the nodes and the coupling between nanoentities is stored on weighted, undirected edges.</p>
+
+<p>The Service Cutter uses graph clustering algorithms to find densely connected clusters which are presented as candidate services. Currently two different algorithms are supported:
 The "Epidemic Label Propagation" by <a href="http://arxiv.org/pdf/0808.2633.pdf"><strong>Leung</strong> et al</a> is non-deterministic and finds an optimal number of clusters. Use the recalculate button to see different service cuts.</p>
 
 <p><img src="https://raw.githubusercontent.com/ServiceCutter/servicecutter.github.io/master/screenshot-solver-algo-leung.png" alt="Screenshot Leung"></p>
@@ -94,12 +94,10 @@ The "Epidemic Label Propagation" by <a href="http://arxiv.org/pdf/0808.2633.pdf"
 
 <p><img src="https://raw.githubusercontent.com/ServiceCutter/servicecutter.github.io/master/screenshot-solver-algo-gn.png" alt="Screenshot Girvan-Newman"></p>
 
-<p>We recommend to start with Leung and then analyze specific numbers of services with Girvan-Newman.</p>
-
 <h2>
 <a id="parameters" class="anchor" href="#parameters" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parameters</h2>
 
-<p>The parameters can be used to influence the candidate service cuts. Modify the coupling criteria in such a way that they reflect the your system's context. Security and consistency for example are significantly divergent in a banking environment compared to an online social network.</p>
+<p>The parameters can be used to influence the candidate service cuts. Modify the coupling criteria in such a way that they reflect the your system's context. Consistency for example is significantly divergent in a banking environment compared to an online social network.</p>
 
 <p><img src="https://raw.githubusercontent.com/ServiceCutter/servicecutter.github.io/master/screenshot-solver-priorities.png" alt="Screenshot priorities"></p>
 
@@ -145,7 +143,7 @@ The "Epidemic Label Propagation" by <a href="http://arxiv.org/pdf/0808.2633.pdf"
 <h2>
 <a id="monolith-to-microservice" class="anchor" href="#monolith-to-microservice" aria-hidden="true"><span class="octicon octicon-link"></span></a>Monolith to microservice</h2>
 
-<p>The likely scenario with existing software is the transition from a "big ball of mud" to a nice microservice architecture. You’ve been working on an application for quite a while and you and your team only implemented a single service: The monolith. After carefully reviewing your architecture you decided that the time has come to split your application into services. This leaves to you with one big question: "Where shall I start?" The Service Cutter is able to identify candidate service cuts with a given number of services. You can use the Girvan-Newman algorithm and set the number of clusters to two. Then iteratively increase the number of services by one and you will see a possible path towards an architecture based on services.</p>
+<p>The likely scenario with existing software is the transition from a monolith to a microservice architecture. You’ve been working on an application for quite a while and you and your team only implemented a single service. After carefully reviewing your architecture, you decided that the time has come to split your application into services. This leaves to you with one big question: "Where shall I start?" The Service Cutter is able to identify candidate service cuts with a given number of services. You can use the Girvan-Newman algorithm and set the number of clusters to two. Then iteratively increase the number of services by one and you will see a possible path towards an architecture based on services.</p>
 
 <ul>
 <li>
